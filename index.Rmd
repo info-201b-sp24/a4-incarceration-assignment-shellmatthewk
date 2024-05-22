@@ -2,10 +2,29 @@
 title: "A3: Incarceration"
 output: html_document
 ---
-
+```{r load-table, echo = FALSE, results = 'asis', message = FALSE, warning = FALSE}
+library(dplyr)
+library(tidyverse)
+library(knitr)
+```
 ### Introduction
 
 An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
+
+I am investigating the incarceration trends in racial populations over time. I will be considering all of the available races and the years of incarceration. I am choosing to analyze these because these rates are a deep history of America, and these societal problems have been prevalent in our lives ever since we were born, and longer. Many of our history classes cover these problems, of which are covered by the 13th Amendment documentary. I have watched this documentary multiple times for different classes, so finally being able to analyze the data myself helps give me a better scope on the issue. 
+
+For this investigation, I want to analyze this trend because in the news, I never see any headlines on any other race being incarcerated, other than those of black descent. Therefore, this investigation will help enlighten me to the idea that the media is only trying to highlight certain races, or if that is the reality of the prison system. An important thing to note is that I will be considering is prison population, and not jail population. 
+
+The variables in question, are: 
+
+- AAPI Prison pop, 
+- Black Prison pop, 
+- Latinx Prison pop, 
+- Native Prison pop, 
+- White Prison pop, 
+- Year. 
+
+All of these are the different races considered, which are all valuable for my investigation. I can consider all of these trends and compare them over the years considered, to dive deeper into my analysis for the problem introduced. 
 
 ### Summary Information
 
@@ -22,13 +41,45 @@ Feel free to calculate and report values that you find relevant. Again, remember
 ### The Dataset
 
 Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
 
+- The Vera Institute collected this data. 
+
+How was the data collected or generated?  
+
+- This data was collected by merging data from the BJS National Corrections Reporting Program (NCRP), and the original jails dataset to produce a dataset based on incarceration and jails rates at the county level. 
+
+Why was the data collected?  
+
+- Vera collected the data because they wanted to understand multiple trends and contours with incarceration in the United States. This data set gives light to deeper understandings of high rates of incarcerations in certain locations within the US.
+
+How many observations (rows) are in your data?  
+
+- I am using the 'us-prison-jail-rates-1990.csv' and 'us-prison-jail-rates.csv' data sets. 
+```{r}
+library(dplyr)
+source("SummaryInformation.R")
+```
+
+- us-prison-jail-rates.csv contains **`r rows1`** rows of data. 
+- us-prison-jail-rates-1990.csv contains **`r rows2`** rows of data.
+
+How many features (columns) are in the data?  
+
+- us-prison-jail-rates.csv contains **`r cols1`** columns of data. 
+- us-prison-jail-rates-1990.csv contains **`r cols2`** columns of data.
+
+What, if any, ethical questions or questions of power do you need to consider when working with this data? 
+
+- Possible questions arise about how data is used. The findings, and extraction of data could be used differently by other people, and could potentially mean harm to marginalized groups of people. 
+- Another question that arises is how confidential the information is, and whether or not this data could be used for any decisions in the future, such as in politics, or other locations of policy making. 
+
+What are possible limitations or problems with this data?
+
+Possible limitations of this data are that it doesn't consider people individually. As in today's world, we have seen many cases of where many people are falsely incarcerated, and for other reasons that should not be properly considered for incarceration. This data set does not consider any of that information, and only considers people in the data set as numbers. One of my lectures in my Anthropology and Sport class contains ethical concerns about viewing athletes as just numbers, and having an emotional connection to the athlete because of how they are only considered as a statistic. 
+
+This data set is extremely similar to that logic, as the people are only considered as mere numbers, rather than names and reason (although that starts to fit more into an ethical question!) would give us a greater scope of the reasoning and could find a cause and more data for locations and reason for incarceration. Without this data, however, it becomes hard to categorize the actual crimes and incarceration, because it doesn't consider who the person was or what they were doing at the time of incarceration. 
+
+Another issue with the data is that it doesn't consider by month, it only considers per year, which is enough to question the months that are incarcerated more commonly, and whether or not there is a trend with that information. 
 
 ### Trends Over Time Chart
 
@@ -46,8 +97,6 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
-```
 
 ### Variable Comparison Chart
 
