@@ -6,6 +6,8 @@ output: html_document
 library(dplyr)
 library(tidyverse)
 library(knitr)
+options(scipen=999)
+
 ```
 ### Introduction
 
@@ -28,15 +30,15 @@ All of these are the different races considered, which are all valuable for my i
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+``````{r load-summarinfo, echo = FALSE, results = 'asis', message = FALSE, warning = FALSE }
+library(dplyr)
+source("SummaryInformation.R")
+``````
+Interestingly, what has been discovered is that from 2018, the average counts for prison population rates across all counties are as follows: a AAPI jail population of **`r current_incarceration_for_race$AAPI_Current`**, a Black jail population of **`r current_incarceration_for_race$BLACK_Current`**, a Latinx jail population of **`r current_incarceration_for_race$LATINX_Current`**, a Native jail population of **`r current_incarceration_for_race$NATIVE_Current`**, and a White jail population of **`r current_incarceration_for_race$WHITE_Current`**. 
 
-These will likely be calculated using your DPLYR skills, answering questions such as: 
+Across all these populations, currently the black jail population has the greatest rate, and the least being AAPI, followed closely by the white jail population. Overtime, however, it has seemed that there have been changes opposite to those conveyed by the currently jail population. As of recent, there has been some changes in the overall jailing populations. as of 2018 from 1990, there have been these following changes in population rates: in AAPI, there has been a change of **`r pop_change$change_AAPI`**, in Black people, there has been a change of **`r pop_change$change_BLACK`**, in Latinx, there has been a change of **`r pop_change$change_Latinx`**, in Native, there has been a change of **`r pop_change$change_Native`**, in White, there has been a change of **`r pop_change$change_White`**. 
 
-- What is the average value of my variable across all the counties (in the current year)?
-- Where is my variable the highest / lowest?
-- How much has my variable change over the last N years?
-
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
+All of these changes illuminate how every race but black has been increasing in jailing, whereas the black jail population has been decreasing. 
 
 ### The Dataset
 
@@ -55,10 +57,6 @@ Why was the data collected?
 How many observations (rows) are in your data?  
 
 - I am using the 'us-prison-jail-rates-1990.csv' and 'us-prison-jail-rates.csv' data sets. 
-```{r}
-library(dplyr)
-source("SummaryInformation.R")
-```
 
 - us-prison-jail-rates.csv contains **`r rows1`** rows of data. 
 - us-prison-jail-rates-1990.csv contains **`r rows2`** rows of data.

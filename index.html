@@ -389,19 +389,28 @@ for the problem introduced.</p>
 </div>
 <div id="summary-information" class="section level3">
 <h3>Summary Information</h3>
-<p>Write a summary paragraph of findings that includes the 5 values
-calculated from your summary information R script</p>
-<p>These will likely be calculated using your DPLYR skills, answering
-questions such as: </p>
-<ul>
-<li>What is the average value of my variable across all the counties (in
-the current year)?</li>
-<li>Where is my variable the highest / lowest?</li>
-<li>How much has my variable change over the last N years?</li>
-</ul>
-<p>Feel free to calculate and report values that you find relevant.
-Again, remember that the purpose is to think about how these measure of
-incarceration vary by race.</p>
+<p>Interestingly, what has been discovered is that from 2018, the
+average counts for prison population rates across all counties are as
+follows: a AAPI jail population of <strong>446.92</strong>, a Black jail
+population of <strong>2519.29</strong>, a Latinx jail population of
+<strong>972.74</strong>, a Native jail population of
+<strong>1046.69</strong>, and a White jail population of
+<strong>498.13</strong>.</p>
+<p>Across all these populations, currently the black jail population has
+the greatest rate, and the least being AAPI, followed closely by the
+white jail population. Overtime, however, it has seemed that there have
+been changes opposite to those conveyed by the currently jail
+population. As of recent, there has been some changes in the overall
+jailing populations. as of 2018 from 1990, there have been these
+following changes in population rates: in AAPI, there has been a change
+of <strong>731976.79</strong>, in Black people, there has been a change
+of <strong>-3048194.66</strong>, in Latinx, there has been a change of
+<strong>736801.9</strong>, in Native, there has been a change of
+<strong>1878957.97</strong>, in White, there has been a change of
+<strong>1059014.44</strong>.</p>
+<p>All of these changes illuminate how every race but black has been
+increasing in jailing, whereas the black jail population has been
+decreasing.</p>
 </div>
 <div id="the-dataset" class="section level3">
 <h3>The Dataset</h3>
@@ -425,16 +434,12 @@ in certain locations within the US.</li>
 </ul>
 <p>How many observations (rows) are in your data?</p>
 <ul>
-<li>I am using the ‘us-prison-jail-rates-1990.csv’ and
-‘us-prison-jail-rates.csv’ data sets.</li>
-</ul>
-<pre class="r"><code>library(dplyr)
-source(&quot;SummaryInformation.R&quot;)</code></pre>
-<ul>
-<li>us-prison-jail-rates.csv contains <strong>153811</strong> rows of
-data.</li>
-<li>us-prison-jail-rates-1990.csv contains <strong>91031</strong> rows
-of data.</li>
+<li><p>I am using the ‘us-prison-jail-rates-1990.csv’ and
+‘us-prison-jail-rates.csv’ data sets.</p></li>
+<li><p>us-prison-jail-rates.csv contains <strong>153811</strong> rows of
+data.</p></li>
+<li><p>us-prison-jail-rates-1990.csv contains <strong>91031</strong>
+rows of data.</p></li>
 </ul>
 <p>How many features (columns) are in the data?</p>
 <ul>
