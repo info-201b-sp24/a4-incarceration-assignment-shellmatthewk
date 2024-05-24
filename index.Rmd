@@ -2,7 +2,7 @@
 title: "A3: Incarceration"
 output: html_document
 ---
-```{r load-table, echo = FALSE, results = 'asis', message = FALSE, warning = FALSE}
+```{r load-libraries, echo = FALSE, results = 'asis', message = FALSE, warning = FALSE}
 library(dplyr)
 library(tidyverse)
 library(knitr)
@@ -80,23 +80,15 @@ This data set is extremely similar to that logic, as the people are only conside
 Another issue with the data is that it doesn't consider by month, it only considers per year, which is enough to question the months that are incarcerated more commonly, and whether or not there is a trend with that information. 
 
 ### Trends Over Time Chart
+``````{r, echo = FALSE, fig.align='center', fig.width=16, fig.height=12, warning=FALSE, message=FALSE, code = readLines('TrendOverTime.R')}
+``````
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+I included this chart because I felt it lined up the best with the summary statistics provided. This chart also makes it much easier to visualize the large jailing populations in the United States compared to each other. Since none of the races are scaled, we can see that most of the other races follow trends near to each other. AAPI, Latinx, Native American and White all average at around the values between 5,000,000 and 0, whereas the Black jail population rate averages anywhere from 7,500,000 to 20,000,000. We can see the population rate that has the greatest fluctuation is the black jail population, which has been decreasing ever since around 1999. 
 
-The first chart that you will create and include will show the trend over time of your variable/topic. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - This may mean showing the same measure for different locations or different racial groups. Think carefully about a meaningful comparison of locations (e.g., the top 10 counties in a state, top 10 states, etc.)
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
+The only population that has been steadily increasing in jail rate since the start of data collection is the White population, however, every other population has been increasing or decreasing throughout the time period. This chart is a great visualization of how we can see some normalization of society, including treating races as equal, however we can see by the end of 2018 that this is still not truly the case. 
 
 ### Variable Comparison Chart
+
 
 Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 

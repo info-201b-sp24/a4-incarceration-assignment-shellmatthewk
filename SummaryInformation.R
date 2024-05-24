@@ -15,7 +15,7 @@ cols2 <- ncol(data2)
 rows2
 cols2
 
-#summary information: 
+## summary information: 
 oldest_year <- min(data2$year) 
 recent <- max(data2$year) 
 
@@ -63,6 +63,8 @@ highest_and_lowest_now <- data2 %>% ## since 1990
     WHITE_first_low = ifelse(all(is.na(white_jail_pop_rate)), NA, min(white_jail_pop_rate, na.rm = TRUE))
   )
 
+
+## population changes
 oldest_year <- min(data2$year) 
 recent <- max(data2$year) 
 
