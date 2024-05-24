@@ -11,19 +11,18 @@ options(scipen=999)
 ```
 ### Introduction
 
-An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
-
 I am investigating the incarceration trends in racial populations over time. I will be considering all of the available races and the years of incarceration. I am choosing to analyze these because these rates are a deep history of America, and these societal problems have been prevalent in our lives ever since we were born, and longer. Many of our history classes cover these problems, of which are covered by the 13th Amendment documentary. I have watched this documentary multiple times for different classes, so finally being able to analyze the data myself helps give me a better scope on the issue. 
 
-For this investigation, I want to analyze this trend because in the news, I never see any headlines on any other race being incarcerated, other than those of black descent. Therefore, this investigation will help enlighten me to the idea that the media is only trying to highlight certain races, or if that is the reality of the prison system. An important thing to note is that I will be considering is prison population, and not jail population. 
+For this investigation, I want to analyze this trend because in the news, I never see any headlines on any other race being incarcerated, other than those of black descent. Therefore, this investigation will help enlighten me to the idea that the media is only trying to highlight certain races, or if that is the reality of the prison system. An important thing to note is that I will be considering jail population, not prison population. 
 
 The variables in question, are: 
 
-- AAPI Prison pop, 
-- Black Prison pop, 
-- Latinx Prison pop, 
-- Native Prison pop, 
-- White Prison pop, 
+- AAPI jail pop, 
+- Black jail pop, 
+- Latinx jail pop, 
+- Native jail pop, 
+- White jail pop, 
+- Total Jail pop,
 - Year. 
 
 All of these are the different races considered, which are all valuable for my investigation. I can consider all of these trends and compare them over the years considered, to dive deeper into my analysis for the problem introduced. 
@@ -89,14 +88,14 @@ The only population that has been steadily increasing in jail rate since the sta
 
 ### Variable Comparison Chart
 
+``````{r, echo = FALSE, fig.align='center', fig.width=16, fig.height=12, warning=FALSE, message=FALSE, code = readLines('DataVisualizationChart.R')}
+``````
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+I included this variable comparison chart because I thought that comparing two different jail rates between two different races might highlight a correlation between the increases of both. After looking at this chart, it is very hard to determine any outcome as although the variables do increase with each other, there are so many dips in the data that no actual outcome can be determined. 
 
-The second chart that you will create and include will show how two different (continuous) variables are related to one another. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+I decided to find the average of all the population rates in one given year, then divide total by each of the given race populations in jail. Interestingly enough, the total population rate is always less than than one given race, which inherently, doesn't make very much sense. This data concludes that there could potentially be a reason between Native populations in jail increasing with Latinx populations in jail, but not enough evidence to properly make this conclusion. 
 
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
+In the time chart, I thought these two variables might have some correlation together. As one increased, the other increased, and I wanted to see how this could look on a graph. 
 
 ### Map
 
