@@ -37,7 +37,7 @@ Interestingly, what has been discovered is that from 2018, the average counts fo
 
 Across all these populations, currently the black jail population has the greatest rate, and the least being AAPI, followed closely by the white jail population. Overtime, however, it has seemed that there have been changes opposite to those conveyed by the currently jail population. As of recent, there has been some changes in the overall jailing populations. as of 2018 from 1990, there have been these following changes in population rates: in AAPI, there has been a change of **`r pop_change$change_AAPI`**, in Black people, there has been a change of **`r pop_change$change_BLACK`**, in Latinx, there has been a change of **`r pop_change$change_Latinx`**, in Native, there has been a change of **`r pop_change$change_Native`**, in White, there has been a change of **`r pop_change$change_White`**. 
 
-All of these changes illuminate how every race but black has been increasing in jailing, whereas the black jail population has been decreasing. 
+All of these changes illuminate how every race but black has been increasing in jailing, whereas the black jail population has been decreasing. These are also the mean values for all of the most recent values in all counties for jail populations. 
 
 ### The Dataset
 
@@ -82,7 +82,7 @@ Another issue with the data is that it doesn't consider by month, it only consid
 ``````{r, echo = FALSE, fig.align='center', fig.width=16, fig.height=12, warning=FALSE, message=FALSE, code = readLines('TrendOverTime.R')}
 ``````
 
-I included this chart because I felt it lined up the best with the summary statistics provided. This chart also makes it much easier to visualize the large jailing populations in the United States compared to each other. Since none of the races are scaled, we can see that most of the other races follow trends near to each other. AAPI, Latinx, Native American and White all average at around the values between 5,000,000 and 0, whereas the Black jail population rate averages anywhere from 7,500,000 to 20,000,000. We can see the population rate that has the greatest fluctuation is the black jail population, which has been decreasing ever since around 1999. 
+I included this chart because I felt it lined up the best with the summary statistics provided. This chart also makes it much easier to visualize the large jailing populations in the United States compared to each other. Since none of the races are scaled, we can see that most of the other races follow trends near to each other. AAPI, Latinx, Native American and White all average at around the values between 200 and 600, whereas the Black jail population rate averages anywhere from 2,500 to 7,500. We can see the population rate that has the greatest fluctuation is the black jail population, which has been decreasing ever since around 1999. 
 
 The only population that has been steadily increasing in jail rate since the start of data collection is the White population, however, every other population has been increasing or decreasing throughout the time period. This chart is a great visualization of how we can see some normalization of society, including treating races as equal, however we can see by the end of 2018 that this is still not truly the case. 
 
@@ -93,17 +93,16 @@ The only population that has been steadily increasing in jail rate since the sta
 
 I included this variable comparison chart because I thought that comparing two different jail rates between two different races might highlight a correlation between the increases of both. After looking at this chart, it is very hard to determine any outcome as although the variables do increase with each other, there are so many dips in the data that no actual outcome can be determined. 
 
-I decided to find the average of all the population rates in one given year, then divide total by each of the given race populations in jail. Interestingly enough, the total population rate is always less than than one given race, which inherently, doesn't make very much sense. This data concludes that there could potentially be a reason between Native populations in jail increasing with Latinx populations in jail, but not enough evidence to properly make this conclusion. 
+I decided to find the average of all the population rates in one given year, then divide the total by each of the given race populations in jail. Interestingly enough, the total population rate is always less than than one given race, which inherently, doesn't make very much sense. This data concludes that there could potentially be a reason between Native populations in jail increasing with Latinx populations in jail, but not enough evidence to properly make this conclusion. 
 
 In the time chart, I thought these two variables might have some correlation together. As one increased, the other increased, and I wanted to see how this could look on a graph. 
 
 ### Map
+``````{r, echo = FALSE, fig.align='center', fig.width=16, fig.height=12, warning=FALSE, message=FALSE, code = readLines('GeographicRepresentation.R')}
+``````
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+I created a chart based on the African American average jail population rate for each state. I included this chart because rather on a time chart by year, this makes it easier to visualize which states are having these large population rates in jail, and which are not. Interestingly, we see the darker shaded states to be more commonly having higher population rates in jail to be usually republican states, and lighter to be democratic states. 
 
-The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+Interestingly enough, we see that Utah has the highest African American jail population rate. This is because of either the data for Utah being messed up, or the counties having different ways of counting populations. 
 
-- Your map needs a title
-- Your color scale needs a legend with a clear label
-- Use a map based coordinate system to set the aspect ratio of your map
-
+Keep in mind that some states did not have data, such as Vermont, Connecticut and Delaware, which are not included on the map as they do not have any relevant information. This data is taken from the most recent value of data, and in the future if needed to be expanded, a new map could be created each year with the data and find color differences in the map. 

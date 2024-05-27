@@ -72,22 +72,22 @@ pop_change_recent <- data2 %>%
   filter(year == recent) %>%
   group_by(year) %>%
   summarise(
-    total_AAPI_recent = sum(aapi_jail_pop_rate, na.rm = TRUE),
-    total_Black_recent = sum(black_jail_pop_rate, na.rm = TRUE),
-    total_Latinx_recent = sum(latinx_jail_pop_rate, na.rm = TRUE),
-    total_Native_recent = sum(native_jail_pop_rate, na.rm = TRUE),
-    total_White_recent = sum(white_jail_pop_rate, na.rm = TRUE)
+    total_AAPI_recent = mean(aapi_jail_pop_rate, na.rm = TRUE),
+    total_Black_recent = mean(black_jail_pop_rate, na.rm = TRUE),
+    total_Latinx_recent = mean(latinx_jail_pop_rate, na.rm = TRUE),
+    total_Native_recent = mean(native_jail_pop_rate, na.rm = TRUE),
+    total_White_recent = mean(white_jail_pop_rate, na.rm = TRUE)
   )
 
 pop_change_oldest <- data2 %>%
   filter(year == oldest_year) %>%
   group_by(year) %>%
   summarise(
-    total_AAPI_then = sum(aapi_jail_pop_rate, na.rm = TRUE),
-    total_Black_then = sum(black_jail_pop_rate, na.rm = TRUE),
-    total_Latinx_then = sum(latinx_jail_pop_rate, na.rm = TRUE),
-    total_Native_then = sum(native_jail_pop_rate, na.rm = TRUE),
-    total_White_then = sum(white_jail_pop_rate, na.rm = TRUE)
+    total_AAPI_then = mean(aapi_jail_pop_rate, na.rm = TRUE),
+    total_Black_then = mean(black_jail_pop_rate, na.rm = TRUE),
+    total_Latinx_then = mean(latinx_jail_pop_rate, na.rm = TRUE),
+    total_Native_then = mean(native_jail_pop_rate, na.rm = TRUE),
+    total_White_then = mean(white_jail_pop_rate, na.rm = TRUE)
   )
 
 

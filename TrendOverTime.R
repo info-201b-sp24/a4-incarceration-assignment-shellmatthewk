@@ -8,11 +8,11 @@ data2 <- read.csv(file)
 population_totals_year <- data2 %>%
   group_by(year) %>%
   summarise(
-    total_AAPI = sum(aapi_jail_pop_rate, na.rm = TRUE),
-    total_Black = sum(black_jail_pop_rate, na.rm = TRUE),
-    total_Latinx = sum(latinx_jail_pop_rate, na.rm = TRUE),
-    total_Native = sum(native_jail_pop_rate, na.rm = TRUE),
-    total_White = sum(white_jail_pop_rate, na.rm = TRUE)
+    total_AAPI = mean(aapi_jail_pop_rate, na.rm = TRUE),
+    total_Black = mean(black_jail_pop_rate, na.rm = TRUE),
+    total_Latinx = mean(latinx_jail_pop_rate, na.rm = TRUE),
+    total_Native = mean(native_jail_pop_rate, na.rm = TRUE),
+    total_White = mean(white_jail_pop_rate, na.rm = TRUE)
   )
 
 population_totals_year$year <- as.factor(population_totals_year$year)
